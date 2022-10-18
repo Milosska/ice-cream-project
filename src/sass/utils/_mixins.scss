@@ -150,6 +150,7 @@
     &:hover,
     &:focus {
       background-color: var(--button-green);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
     &:disabled {
       background-color: var(--button-grey);
@@ -161,12 +162,14 @@
     &:hover,
     &:focus {
       border: 2px solid var(--button-green);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
     &:disabled {
       border: 2px solid var(--button-grey);
     }
   } @else if $type == text {
     background-color: transparent;
+    border: none;
     color: var(--button-yellow);
     &::after {
       display: none;
@@ -175,6 +178,7 @@
     &:hover,
     &:focus {
       color: var(--button-green);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
     &:disabled {
       color: var(--button-grey);
