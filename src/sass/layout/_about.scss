@@ -83,6 +83,9 @@
     position: absolute;
     top: 21px;
 
+    transform: scale(0.9);
+    animation: pulse 5s ease-in-out infinite;
+
     @include media(min, tablet) {
       @include pseudo(334px, 330px);
       background-image: url(../images/about/cow@2x-min.png);
@@ -94,6 +97,18 @@
       top: 39px;
       background-image: url(../images/about/cow@3x-min.png);
     }
+  }
+}
+/*-----------------------animation cow---------------*/
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
   }
 }
 
@@ -148,6 +163,13 @@
   .third__p {
     display: none;
   }
+}
+/*-----------------------ANIMATION TEXT---------------*/
+.div__p {
+  transition: 1s;
+}
+.div__p:hover {
+  transform: scale(1.2);
 }
 
 .about__btn {
