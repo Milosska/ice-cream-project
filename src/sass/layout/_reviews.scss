@@ -1,0 +1,14 @@
+.swiper {
+  width: 280px;
+  height: 466px;
+
+  @media screen and (min-width: map-get($breakpoints, 'tablet')) {
+    width: 705px;
+    height: 352px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'desktop')) {
+    width: 968px;
+    height: 364px;
+  }
+}

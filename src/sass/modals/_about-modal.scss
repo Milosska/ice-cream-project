@@ -1,0 +1,43 @@
+.modal {
+  padding: 28px;
+
+  @include media(min, tablet) {
+    padding: 32px 60px;
+  }
+}
+.modal__title {
+  font-family: var(--heading-font);
+
+  @include font-size(16px, 24px);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  @include media(min, tablet) {
+    @include font-size(20px, 28px);
+    margin-bottom: 32px;
+  }
+}
+
+.modal__video {
+  display: flex;
+  @extend %centred;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--text-black);
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+
+  @include media(min, tablet) {
+    min-width: 448px;
+    min-height: 205px;
+    margin-bottom: 32px;
+  }
+}
+
+.modal__text {
+  line-height: 140%;
+}

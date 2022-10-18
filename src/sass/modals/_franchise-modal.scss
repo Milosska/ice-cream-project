@@ -1,0 +1,239 @@
+.modal__btn {
+  @include media(max, phone) {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+.franchise__subtitle {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  @include font-size(16px, 24px);
+
+  text-align: center;
+
+  color: var(--text-black);
+
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    width: 300px;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include media(min, tablet) {
+    width: 322px;
+
+    font-size: 20px;
+
+    @include font-size(20px, 28px);
+
+    margin-right: auto;
+    margin-bottom: 24px;
+    margin-left: auto;
+  }
+}
+
+.franchise__desk {
+  line-height: 140%;
+  letter-spacing: 0.02em;
+
+  color: var(--text-black);
+
+  margin-bottom: 24px;
+
+  @include media(min, tablet) {
+    font-size: 16px;
+  }
+}
+
+.franchise-group {
+  width: 224px;
+
+  margin-right: auto;
+  margin-bottom: 24px;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    width: 300px;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include media(min, tablet) {
+    width: 368px;
+
+    margin-right: auto;
+    margin-bottom: 32px;
+    margin-left: auto;
+  }
+}
+
+.franchise-group__field {
+  position: relative;
+
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &:not(:last-child) {
+    @include media(min, tablet) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.franchise-group__desk {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  font-size: 12px;
+  line-height: 140%;
+
+  margin-bottom: 4px;
+
+  @include media(min, tablet) {
+    font-size: 14px;
+    left: 16px;
+  }
+
+  @include animation(transform);
+}
+
+.franchise-group__desk.desk {
+  transform: translateY(-150%);
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    transform: translateY(-175%);
+  }
+
+  @include media(min, tablet) {
+    transform: translateY(-170%);
+  }
+
+  @include animation(transform);
+}
+
+.franchise-group__input:focus + .franchise-group__desk,
+.franchise-group__input:not(:placeholder-shown) + .franchise-group__desk {
+  transform: translate(-12px, -182%);
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    transform: translate(-12px, -195%);
+  }
+
+  @include media(min, tablet) {
+    transform: translate(-16px, -200%);
+  }
+}
+
+.franchise-group__comment:focus + .franchise-group__desk.desk,
+.franchise-group__comment:not(:placeholder-shown)
+  + .franchise-group__desk.desk {
+  transform: translate(-12px, -280%);
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    transform: translate(-12px, -320%);
+  }
+
+  @include media(min, tablet) {
+    transform: translate(-16px, -315%);
+  }
+}
+
+.franchise-group__input {
+  width: 224px;
+  height: 32px;
+
+  background-color: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  outline: transparent;
+
+  padding-right: 12px;
+  padding-left: 12px;
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    width: 300px;
+    height: 38px;
+  }
+
+  @include media(min, tablet) {
+    width: 368px;
+    height: 42px;
+
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  @include animation(border-color);
+
+  &:focus {
+    border-color: var(--button-green);
+  }
+
+  &::placeholder {
+    opacity: 0;
+
+    @include animation(opacity);
+  }
+
+  &:focus::placeholder {
+    opacity: 1;
+  }
+}
+
+.franchise-group__comment {
+  width: 224px;
+  height: 64px;
+
+  resize: none;
+
+  background-color: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  outline: transparent;
+
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-left: 12px;
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    width: 300px;
+    height: 74px;
+  }
+
+  @include media(min, tablet) {
+    width: 368px;
+    height: 84px;
+
+    padding-top: 11px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  @include animation(border-color);
+
+  &:focus {
+    border-color: var(--button-green);
+  }
+
+  &::placeholder {
+    opacity: 0;
+
+    @include animation(opacity);
+  }
+
+  &:focus::placeholder {
+    opacity: 1;
+  }
+}

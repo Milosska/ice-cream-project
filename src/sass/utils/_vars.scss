@@ -1,0 +1,50 @@
+:root {
+  /* ================= кольори ===============*/
+
+  /* --------- глобальні фонові кольори -----------*/
+  --bg-main: #84a178;
+  --bg-modal: #fcfcfc;
+  --modal-input: rgba(248, 210, 78, 0.1);
+
+  /* --------- глобальні текстові кольори -----------*/
+  --text-white: #fcfcfc;
+  --text-black: #131313;
+  --text-orange: #d6936d;
+
+  /* --------- для кнопок -----------*/
+  --button-yellow: #f8d24e;
+  --button-green: #0a8817;
+  --button-grey: #ababab;
+  --button-white: #fcfcfc;
+
+  /* ----- header модалка -------*/
+  --hm-stroke-green: #96af8c;
+  --hm-bg-yellow: #efd478;
+  --hm-stroke-orange: #d6936d;
+
+  /* ----- секція products -------*/
+  --bg-products-1: #aec6a5;
+  --bg-products-2: #efd478;
+  --bg-products-3: #d6936d;
+
+  --bg-shadow-1: rgba(10, 136, 23, 0.25);
+  --bg-shadow-2: rgba(153, 114, 23, 0.25);
+  --bg-shadow-3: rgba(0, 0, 0, 0.25);
+
+  /* =================== шрифт ======================== */
+  --main-font: 'Montserrat', sans-serif;
+  //400, 500, 600, 700, 800, 900
+  --heading-font: 'Seymour One', sans-serif;
+  //400
+  --advantages-font: 'Roboto', sans-serif;
+  //700
+}
+/* ==================== анімування ефектів ================= */
+$animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+/* ==================== media ================= */
+$breakpoints: (
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1200px,
+);

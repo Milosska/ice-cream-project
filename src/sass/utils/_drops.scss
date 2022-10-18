@@ -1,0 +1,58 @@
+body {
+  background-color: var(--bg-main);
+  color: var(--text-white);
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  cursor: url(../images/сursor.svg), auto;
+
+  &.modal.active {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: url(../images/сursor.svg), pointer;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  cursor: url(../images/сursor.svg), pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+address {
+  font-style: normal;
+}
+
+label {
+  cursor: url(../images/сursor.svg), pointer;
+}

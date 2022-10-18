@@ -1,0 +1,183 @@
+/* ====================== розраховує висоту текстової строки =======================*/
+@mixin font-size($size, $height) {
+  font-size: $size;
+  line-height: calc($height / $size);
+}
+
+/* ============================ додає скруглені псевдоелементи у секціях  =========================*/
+@mixin pseudo($width, $height) {
+  display: block;
+  content: '';
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+
+/* ============================ для роботи з флексами ===========================*/
+/* ------- ставить gap, вирівнює об'єкти по горизонталі і по вертикалі (за замовченням по центру) ------- */
+// значення null на місці змінної прибирає параметр (строку коду) з міксіну
+@mixin flex($gap, $x: center, $y: center) {
+  display: flex;
+  gap: $gap;
+  justify-content: $x;
+  align-items: $y;
+}
+
+/* ------- розраховує параметр flex-basis ------- */
+// ($n - кількість елементів у рядку; $gap - значення gap)
+@mixin flex-basis($n, $gap) {
+  flex-basis: calc((100% - ($gap * ($n - 1))) / $n);
+}
+
+/* ============================= позиціонує елементи =======================*/
+// ($position - вид позиціонування (relative/absolute/fixed)
+// $top-or-bottom - ставиться значення top або bottom
+// $y - зміщення від верху/низу в px
+// $left-or-right - ставиться значення left або right
+// $x - зміщення справа/зліва в px
+@mixin position(
+  $position: absolute,
+  $top-or-bottom,
+  $y: 0,
+  $left-or-right,
+  $x: 0
+) {
+  position: $position;
+  #{$top-or-bottom}: $y;
+  #{$left-or-right}: $x;
+}
+
+/* ============================ ставить bg-picture для різних ретина-дисплеїв ======================*/
+/* ------- для картинок на один девайс ------- */
+// $folder - назва папки, де зберігається зображення. Якщо шлях до файлу складає більше ніж 1 папку (наприклад images/backgroung/mobile),
+// у параметрі вказуються через / всі папки  крім images (наприклад backgroung/mobile)
+// $picture-name - назва картинки без -min та формату (наприклад якщо картинка називається "cow-min.png", вказуєте "cow")
+// $format - формат картинки (jpg або png)
+@mixin bg-picture($folder, $picture-name, $format) {
+  background-image: url('../images/#{$folder}/#{$picture-name}-min.#{$format}');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/#{$folder}/#{$picture-name}@2-min.#{$format}');
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url('../images/#{$folder}/#{$picture-name}@3-min.#{$format}');
+  }
+}
+
+/* ============================= aнімує властивості =======================*/
+/* ------- одну властивість ------- */
+@mixin animation($property) {
+  transition: $property $animation;
+}
+
+/* ------- дві властивості ------- */
+@mixin animation-m($property-1, $property-2) {
+  transition: $property-1 $animation, $property-2 $animation;
+}
+
+/* ------- три властивості ------- */
+@mixin animation-l($property-1, $property-2, $property-3) {
+  transition: $property-1 $animation, $property-2 $animation,
+    $property-3 $animation;
+}
+
+/* ============================ створює медіаправила ======================*/
+// $max-or-min - ставиться значення max або min
+// $device - вказується назва типу девайса (phone/tablet/desktop)
+@mixin media($max-or-min: min, $device) {
+  @if $max-or-min == max {
+    @media screen and (#{$max-or-min}-width: (map-get($breakpoints, '#{$device}') - 0.5px)) {
+      @content;
+    }
+  } @else {
+    @media screen and (#{$max-or-min}-width: map-get($breakpoints, '#{$device}')) {
+      @content;
+    }
+  }
+}
+
+/* =================== стилізує кнопки у різних станах =================*/
+// $type - обов'язкове значення, обирає тип стилізації. Значення (color, stroke, text) обирається з наступних:
+// Якщо кнопка має фоновий колір і псевдоелемент - color;
+// Якщо кнопка має кольорову рамку і псевдоелемент - stroke;
+// Якщо текст містить тільки посилання відповідного кольору - text
+// $size - розмір шрифту в пікселях (по макету)
+// $height - розмір висоти строки в пікселях (по макету)
+@mixin button-styles($type, $size: 14px, $height: 18px) {
+  padding: 12px 34px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: var(--text-black);
+  font-weight: 600;
+  font-size: $size;
+  line-height: calc($height / $size);
+
+  transition: background-color $animation, background-image $animation;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-image: url(../images/button-bracket-black.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 6px;
+  }
+
+  &:focus {
+    color: var(--text-white);
+    outline: none;
+
+    &::after {
+      background-image: url(../images/button-bracket-white.svg);
+    }
+  }
+
+  @if $type == color {
+    background-color: var(--button-yellow);
+
+    &:hover,
+    &:focus {
+      background-color: var(--button-green);
+    }
+    &:disabled {
+      background-color: var(--button-grey);
+    }
+  } @else if $type == stroke {
+    background-color: transparent;
+    border: 2px solid var(--button-yellow);
+
+    &:hover,
+    &:focus {
+      border: 2px solid var(--button-green);
+    }
+    &:disabled {
+      border: 2px solid var(--button-grey);
+    }
+  } @else if $type == text {
+    background-color: transparent;
+    color: var(--button-yellow);
+    &::after {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--button-green);
+    }
+    &:disabled {
+      color: var(--button-grey);
+    }
+  }
+}
