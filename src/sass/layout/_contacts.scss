@@ -65,6 +65,15 @@
     padding-right: 40px;
     padding-left: 40px;
   }
+  &:hover,
+  &:focus {
+    outline: 9px double #efd478;
+    outline-offset: -9.5px;
+    transform: scale(1.05);
+  }
+
+  @include animation(outline);
+  @include animation(transform);
 }
 
 .card__title {
