@@ -34,11 +34,24 @@
          }
         }
 
+        &__btn:hover,
+        &__btn:focus         {
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+
     &__btn-menu {
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 91px;
         @media screen and (min-width: 768px) {
         display: none;          
         }
+    }
+
+    &__btn-menu:hover,
+    &__btn-menu:focus         {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 
     &__btn-mobile {
@@ -68,13 +81,17 @@
         line-height: 1.25;
         color: var(--text-white);
         padding-top: 40px;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
+        transition: letter-spacing, color 500ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &__link:hover,
     &__link:focus {
         color: var(--button-yellow);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        letter-spacing: 0.2em;
     }
+
 }
 
 .logo {
@@ -84,6 +101,10 @@
       height: 37px;
       margin-right: 269px;
       padding-top: 4px;
+      animation-name: heartbeat;
+      animation-duration: 5000ms;
+      animation-timing-function: ease-in-out;
+
 
       @media screen and (min-width: 768px) and (max-width: 1199px) {
         align-items: center;
@@ -101,8 +122,33 @@
     }
     }
 
-    
+    &__link:hover,
+    &__link:focus  {
+        animation-name: heartbeat;
+    }
+
 }
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.5);
+    }
+
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
 
 // menu
 
@@ -160,7 +206,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
+        padding-top: 20px;
 
         @media screen and (max-width: 375px) {
             font-size: 28px;    
@@ -219,11 +266,12 @@
                        
     }
 
-    &__link:active {
+    &__link:active {        
         color: var(--text-black);
-        
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        letter-spacing: 0.1em;   
     }
-
+    
     &__list {
         padding-top: 51px;
 
@@ -260,5 +308,8 @@
     display: none;    
     }    
 }
+
+
+
 
 
