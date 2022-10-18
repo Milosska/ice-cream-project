@@ -130,7 +130,7 @@
   left: 256px;
   width: 200px;
   height: 120px;
-  max-width: 200px;
+  
   font-family: var(--main-font);
   font-size: 14px;
   line-height: 1.5;
@@ -146,7 +146,8 @@
   @include media(min, tablet) {
     display: block;
     top: 375px;
-    width: 151px;
+    width: 230px;
+    flex-direction: column;
   }
   @include media(min, phone) {}
   display: none;
@@ -236,7 +237,7 @@
 .hero__decoration__number {
   font-family: var(--main-font);
   line-height: 1.14;
-  font-weight: 400;
+  font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-black);
@@ -284,9 +285,9 @@ summary::-webkit-details-marker {
 }
 
 .hero__img_icon {
-  @include media(min, phone) {
-    display: none;
-  }
+  // @include media(min, phone) {
+  //   display: none;
+  // }
   fill: var(--text-white);
   height: 30px;
   width: 50px;
@@ -305,6 +306,7 @@ summary::-webkit-details-marker {
   background-origin: content-box;
   background-repeat: no-repeat;
   display: none;
+  
   @include media(min, phone) {
     display: none;
   }
@@ -329,7 +331,25 @@ summary::-webkit-details-marker {
     background-image: url('../images/hero/plate-desktop-min.png');
   }
 }
-
+.hero__plate{
+ 
+    width: 152px;
+  
+    // animation
+    scale: 1;
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+    transition-delay: 50ms;
+    // end animation
+  
+    @media screen and (min-width: 1200px) {
+      width: 225px;
+    }
+}
+.hero__plate:hover {
+  transform: scale(1.05) rotate(360deg);
+}
 .hero__ribbon {
   display: block;
   position: absolute;
@@ -393,18 +413,18 @@ summary::-webkit-details-marker {
   }
 
   @include media(min, tablet) {
-    top: 70px;
-    left: 418px;
-    width: 270px;
-    height: 343px;
+    top: -46px;
+    left: 43%;
+    width: 390px;
+    height: 453px;
     background-image: url('../images/hero/ice-cream-tablet-min.png');
   }
 
   @include media(min, desktop) {
-    top: 93px;
-    left: 610px;
-    width: 484px;
-    height: 590px;
+    width: 600px;
+    height: 760px;
+    left: 45%;
+    top: -26px;
     background-image: url('../images/hero/ice-cream-desktop-min.png');
   }
 }
