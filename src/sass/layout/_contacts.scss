@@ -70,6 +70,10 @@
     outline: 9px double #efd478;
     outline-offset: -9.5px;
     transform: scale(1.05);
+    background-image: linear-gradient(
+      rgba(239, 211, 120, 0.1),
+      rgba(239, 211, 120, 0.5)
+    );
   }
 
   @include animation(outline);
