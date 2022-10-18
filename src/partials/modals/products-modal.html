@@ -1,0 +1,103 @@
+<!-- Модальне вікно, кнопка закриття і кнопка відправки для модалки -->
+<div class="modal" data-modal="2">
+  <div class="modal__animation">
+    <button
+      class="modal__btn js-modal-close"
+      type="button"
+      aria-label="close form"
+    >
+      <svg class="modal__icon">
+        <use href="./images/symbol-defs.svg#close"></use>
+      </svg>
+    </button>
+
+    <!-- Писати начинку модалки після цієї строки -->
+
+    <div class="ice">
+      <h3 class="ice__title">Chololate icecream</h3>
+      <div class="ice__image"></div>
+      <div class="ice__content">
+        <p class="ice__text">
+          <span class="ice__text--number">320</span>
+          <span class="ice__text--write">kcal</span>
+        </p>
+        <p class="ice__text">
+          <span class="ice__text--number">4g</span>
+          <span class="ice__text--write ice__text--prote">Prote...</span
+          ><span class="ice__text--protein">Protein...</span>
+        </p>
+        <p class="ice__text">
+          <span class="ice__text--number">8,2g</span>
+          <span class="ice__text--write">Fats</span>
+        </p>
+        <p class="ice__text">
+          <span class="ice__text--number">40,4g</span>
+          <span class="ice__text--write">Carbs</span>
+        </p>
+      </div>
+    </div>
+    <p class="ingredients__text">Ingredients</p>
+    <ul class="ingredients__list">
+      <li class="ingredients__item">
+        <span class="ingredients__item--left">Milk</span>
+        <span class="ingredients__item--right">100ml</span>
+      </li>
+      <li class="ingredients__item">
+        <span class="ingredients__item--left">Belgian chocolate</span
+        ><span class="ingredients__item--right">20g</span>
+      </li>
+      <li class="ingredients__item">
+        <span class="ingredients__item--left">Cream</span>
+        <span class="ingredients__item--right">150 ml</span>
+      </li>
+      <li class="ingredients__item">
+        <span class="ingredients__item--left">Cocoa powder</span>
+        <span class="ingredients__item--right">30g</span>
+      </li>
+      <li class="ingredients__item">
+        <span class="ingredients__item--left">Sugar</span>
+        <span class="ingredients__item--right">40g</span>
+      </li>
+      <li class="ingredients__item">
+        <span class="ingredients__item--left">Vanilla sugar</span>
+        <span class="ingredients__item--right">10g</span>
+      </li>
+    </ul>
+    <form class="register-form" name="register form" autocomplete="on">
+      <label class="register-form__field">
+        <span class="register-form__label">Name</span>
+        <input
+          class="register-form__input"
+          type="text"
+          name=""
+          required
+          placeholder="John Dou"
+        />
+      </label>
+
+      <label class="register-form__field">
+        <span class="register-form__label">Phone</span>
+        <input
+          class="register-form__input"
+          type="tel"
+          name=""
+          required
+          placeholder="+38 055 555 55 55"
+        />
+      </label>
+
+      <label class="register-form__field">
+        <span class="register-form__message">Comment</span>
+        <textarea
+          class="register-form__textarea"
+          name=""
+          rows="5"
+          placeholder="Comment"
+        ></textarea>
+      </label>
+
+      <!-- Закінчення начинки модалки -->
+      <button class="submit__btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
