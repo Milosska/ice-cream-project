@@ -66,6 +66,33 @@ padding-top: 20px;
 font-style: normal;
 color: var(--text-white);
 letter-spacing: 0.04em;
+
+
+&:hover {
+
+animation: gelatine 2s infinite;
+
+@keyframes gelatine {
+
+        from,
+        to {
+            transform: scale(1, 1);
+        }
+
+        25% {
+            transform: scale(0.9, 1.1);
+        }
+
+        50% {
+            transform: scale(1.1, 0.9);
+        }
+
+        75% {
+            transform: scale(0.95, 1.05);
+        }
+    }}
+
+
 @media screen and(min-width: 320px){
     font-weight: 700;
         font-size: 18px;
@@ -198,6 +225,28 @@ transform: scale(1);
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0.02em;
+    &:hover {
+    animation: gelatine 2s infinite;
+    
+        @keyframes gelatine {
+    
+            from,
+            to {
+                transform: scale(1, 1);
+            }
+    
+            25% {
+                transform: scale(0.9, 1.1);
+            }
+    
+            50% {
+                transform: scale(1.1, 0.9);
+            }
+    
+            75% {
+                transform: scale(0.95, 1.05);
+            }
+        }}
 @media screen and(min-width: 320px){
     font-size: 12px;
     line-height: 1.55;
@@ -224,8 +273,29 @@ transform: scale(1);
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0.02em;
+    &:hover {
+animation: gelatine 2s infinite;
 
+    @keyframes gelatine {
 
+        from,
+        to {
+            transform: scale(1, 1);
+        }
+
+        25% {
+            transform: scale(0.9, 1.1);
+        }
+
+        50% {
+            transform: scale(1.1, 0.9);
+        }
+
+        75% {
+            transform: scale(0.95, 1.05);
+        }
+    }
+    }
 @include media(min, phone) {
         font-size: 12px;
         line-height: 1.55;
