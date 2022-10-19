@@ -18,7 +18,7 @@
   }
 }
 
-.hero__block-title {
+.hero__block {
   display: flex;
   justify-content: space-between;
   padding-top: 45px;
@@ -44,7 +44,7 @@
     line-height: 48px;
   }
 }
-.hero__title_passion {
+.hero__title-passion {
   font-weight: 400;
   text-align: center;
   font-size: 34px;
@@ -64,18 +64,19 @@
     letter-spacing: 0.04em;
   }
 }
-.hero__block_links {
+.hero__links {
   display: flex;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
   @include media(min, tablet) {
   }
 
   @include media(min, desktop) {
   }
 }
-.hero__block_link:not(:last-child) {
-  margin-right: 15px;
-}
-.hero__block_link_id {
+.hero__link {
   padding: 7px 15px;
   border-radius: 20px;
   font-family: var(--primary-font-family);
@@ -95,7 +96,7 @@
     line-height: 1.29;
   }
 }
-.hero__button {
+.hero__link--products {
   @include button-styles(stroke, 8px, 18px);
   @include media(min, phone) {
     @include button-styles(stroke, 8px, 18px);
@@ -108,7 +109,7 @@
     @include button-styles(stroke, 14px, 18px);
   }
 }
-.hero__link {
+.hero__link--about {
   @include button-styles(text, 8px, 18px);
   @include media(min, phone) {
     @include button-styles(text, 8px, 18px);
@@ -124,116 +125,25 @@
   text-decoration: underline;
 }
 
-.hero__img_text {
-  
-  top: 368px;
-  left: 256px;
-  width: 200px;
-  height: 120px;
-  font-family: var(--main-font);
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 120%;
-  color: var(--bg-modal);
-  @include media(min, phone) {
-  display: none;
-}
-@include media(min, tablet) {
-  display: block;
-  
-}
-  @include media(min, desktop) {
-    display: block;
-    top: 368px;
-    width: 200px;
-    position: absolute;
-  }
-  }
-  
-
-.hero__decoration__icecream {
-  width: 170px;
-  height: 219px;
-
-  @include media(min, tablet) {
-    width: 270px;
-    height: 343px;
-    left: 378px;
-    top: 63px;
-  }
-  @include media(min, desktop) {
-    top: 0;
-    width: 484px;
-    height: 590px;
-    left: 594px;
-    top: 108px;
-  }
-}
-
-.hero__decoration__ribbon {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  top: 452px;
-  width: 328px;
-  height: 50px;
-
-  @include media(min, tablet) {
-    top: 279px;
-    width: 767.23px;
-    height: 67.23px;
-  }
-  @include media(min, desktop) {
-    top: 206px;
-    width: 1200px;
-    height: 384px;
-  }
-}
-
-.hero__block__cookie {
-  position: absolute;
-  left: 17px;
-
-  z-index: 2;
-  width: 152px;
-  height: 152px;
-  @include media(min, phone) {
-    display: none;
-    visibility: hidden;
-  }
-  @include media(min, tablet) {
-    display: block;
-    top: 186px;
-    width: 152px;
-    height: 152px;
-  }
-  @include media(min, desktop) {
-    display: block;
-    top: 301px;
-    width: 225px;
-    height: 225px;
-  }
-}
-
-.hero__block-title-right {
+.hero__block-right {
   @include media(max, phone) {
     display: none;
-   }
-   @include media(min, tablet) {
-  display: flex;
-  flex-direction: column;
-  margin-top: 56px;
-  text-align: right;
-}
-  @include media(min, desktop) { 
+  }
+  @include media(min, tablet) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    text-align: right;
+  }
+  @include media(min, desktop) {
     display: flex;
     flex-direction: column;
     margin-top: 56px;
     text-align: right;
   }
 }
-.hero__decoration__number {
+
+.hero__number {
   font-family: var(--main-font);
   line-height: 1.14;
   font-weight: 900;
@@ -253,7 +163,7 @@
     font-size: 46px;
   }
 }
-.hero__decoration__text {
+.hero__under-number {
   @include media(min, phone) {
     display: none;
   }
@@ -272,53 +182,43 @@
     line-height: 1.29;
   }
 }
-/* +++удаление стандартного маркера details */
-.hero__img_summary {
-  display: block;
-}
-summary::-webkit-details-marker {
+
+.hero__decor {
+  display: flex;
   display: none;
-}
-/* +++удаление стандартного маркера details */
-.hero__img_details {
-}
-
-.hero__img_icon {
-  // @include media(min, phone) {
-  //   display: none;
-  // }
-  fill: var(--text-white);
-  height: 30px;
-  width: 50px;
-  display: block;
- 
-  top: 480px;
-  left: 256px;
-
-  // @include media(min, phone) {
-  //   display: none;
-  // }
-
-  @include media(min, tablet) {
-  
+  @media screen and (min-width: 768px) {
+    width: 151px;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 185px;
+    display: flex;
   }
 
-  @include media(min, desktop) {
-  position: absolute;
+  @media screen and (min-width: 1200px) {
+    margin-top: 60px;
   }
 }
 
-
-.hero__plate {
+.hero__decor--plate {
   display: block;
   position: absolute;
   z-index: 3;
-  content: '';
   background-size: contain;
   background-origin: content-box;
   background-repeat: no-repeat;
   display: none;
-  
+
+  animation: spin 10s linear infinite;
+  animation-play-state: paused;
+  @keyframes spin {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+  &:hover {
+    animation-play-state: running;
+  }
+
   @include media(min, phone) {
     display: none;
   }
@@ -343,67 +243,59 @@ summary::-webkit-details-marker {
     background-image: url('../images/hero/plate-desktop-min.png');
   }
 }
-.hero__plate{
- 
 
-  animation: spin 10s linear infinite;
-  animation-play-state: paused;
-  @keyframes spin {
-    100% {
-      transform: rotate(1turn);
-    }
-  }
-  &:hover {
-    animation-play-state: running;
-  }
-  }
-   
+.hero__thumb {
+  z-index: 4;
+}
 
-
-
-.hero__ribbon {
-  display: block;
-  position: absolute;
-  z-index: 2;
-
-  content: '';
-
-  background-origin: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-  top: 403px;
-  left: 0px;
-  width: 328px;
-  height: 350px;
-  background-size: contain;
-  background-image: url('../images/hero/ribbon-mobile-min.png');
+.hero__thumb-text {
+  top: 368px;
+  left: 256px;
+  width: 200px;
+  height: 120px;
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 120%;
+  color: var(--bg-modal);
   @include media(min, phone) {
-    top: 403px;
-    left: 0px;
-    width: 328px;
-    height: 350px;
-    background-size: contain;
-    background-image: url('../images/hero/ribbon-mobile-min.png');
+    display: none;
   }
-
   @include media(min, tablet) {
-    top: 281px;
-    left: 0px;
-    width: 731.37px;
-    height: 67.23px;
-    background-image: url('../images/hero/ribbon-tablet-min.png');
+    display: block;
   }
-
   @include media(min, desktop) {
-    top: 206px;
-    left: 0px;
-    width: 1200px;
-    height: 384px;
-    background-image: url('../images/hero/ribbon-desktop-min.png');
+    display: block;
+    top: 368px;
+    width: 200px;
+    position: absolute;
   }
 }
-.hero__ice-cream {
-  content: '';
+
+/* +++удаление стандартного маркера details */
+.hero__summary {
+  display: block;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+/* +++удаление стандартного маркера details */
+
+.hero__summary-icon {
+  fill: var(--text-white);
+  height: 30px;
+  width: 50px;
+  display: block;
+
+  top: 480px;
+  left: 256px;
+
+  @include media(min, desktop) {
+    position: absolute;
+  }
+}
+
+.hero__decor--icecream {
   display: block;
   position: absolute;
   z-index: 2;
@@ -439,53 +331,43 @@ summary::-webkit-details-marker {
     background-image: url('../images/hero/ice-cream-desktop-min.png');
   }
 }
-.hero__img_text_details {
- 
-  top: 368px;
-  left: 256px;
-  width: 200px;
-  height: 120px;
-  max-width: 200px;
-  font-family: var(--main-font);
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 120%;
-  color: var(--bg-modal);
+
+.hero__decor--ribbon {
+  display: block;
+  position: absolute;
+  z-index: 2;
+
+  background-origin: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  top: 403px;
+  left: 0px;
+  width: 328px;
+  height: 350px;
+  background-size: contain;
+  background-image: url('../images/hero/ribbon-mobile-min.png');
   @include media(min, phone) {
-    display: none;
+    top: 403px;
+    left: 0px;
+    width: 328px;
+    height: 350px;
+    background-size: contain;
+    background-image: url('../images/hero/ribbon-mobile-min.png');
   }
 
   @include media(min, tablet) {
-    display: block;
-    top: 214px;
-    width: 151px;
+    top: 281px;
+    left: 0px;
+    width: 731.37px;
+    height: 67.23px;
+    background-image: url('../images/hero/ribbon-tablet-min.png');
   }
 
   @include media(min, desktop) {
-    display: block;
-    top: 368px;
-    width: 200px;
+    top: 206px;
+    left: 0px;
+    width: 1200px;
+    height: 384px;
+    background-image: url('../images/hero/ribbon-desktop-min.png');
   }
-}
-
-.hero__decor-element{
-  display: flex;
-  display: none;
-  @media screen and (min-width: 768px) {
-    width: 151px;
-    flex-direction: column;
-    gap: 10px;
-    margin-left: 185px;
-    display: flex;
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin-top: 60px;
-  }
-}
-.hero__block-title-left{
-  z-index: 4;
-}
-.hero__styles-decor{
-  z-index: 4;
 }
