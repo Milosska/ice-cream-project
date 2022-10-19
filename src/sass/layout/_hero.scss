@@ -29,13 +29,13 @@
 .hero__title {
   padding-right: 32px;
   margin-bottom: 32px;
- 
+
   font-family: var(--heading-font);
   font-weight: 400;
   @include font-size(26px, 33px);
   text-transform: uppercase;
-  
-  @media screen and (min-width:480px) and (max-width:767px){
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     text-align: center;
   }
   @include media(min, tablet) {
@@ -70,17 +70,20 @@
   @include flex(8px, flex-start, center);
   position: relative;
   z-index: 1;
-  justify-content: space-around;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    @include flex(80px, center, center);
+    padding-right: 32px;
+  }
+
   @include media(min, tablet) {
     justify-content: space-evenly;
-  
-}
+  }
   @include media(min, desktop) {
     margin-bottom: 32px;
     justify-content: center;
   }
 }
- 
 
 .hero__link--products {
   @include button-styles(stroke, 8px, 10px);
@@ -285,18 +288,20 @@
   background-size: contain;
   @include bg-picture(hero, ribbon-mobile, png);
 
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    background-position: 50% 50%;
+  }
+
   @include media(min, tablet) {
     @include bg-picture(hero, ribbon-tablet, png);
     width: 768px;
     height: 68px;
-    
   }
 
   @include media(min, desktop) {
     @include bg-picture(hero, ribbon-desktop, png);
     width: 1200px;
     height: 384px;
-  
   }
 }
 
@@ -312,6 +317,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   @include bg-picture(hero, ice-cream-mobile, png);
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    background-position: 80% 50%;
+  }
 
   @include media(min, tablet) {
     @include bg-picture(hero, ice-cream-tablet, png);
