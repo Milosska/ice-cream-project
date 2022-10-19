@@ -214,6 +214,7 @@ letter-spacing: 0.04em;
   }
 
 }
+
 .register-form__label{
   
   // display: block;
@@ -264,7 +265,19 @@ letter-spacing: 0.04em;
   }
 }
 
+.register-form__input:not(:placeholder-shown):required:invalid {
+  border-color: #dc143c;
+}
 
+// input {
+//   &:valid {
+//     border: 1px solid green;
+//   }
+  
+//   &:invalid {
+//     border: 1px solid red;
+//   }
+// }
 .register-form__comment{
   margin-bottom: 32px;
   width: 240px;
