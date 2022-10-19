@@ -39,6 +39,10 @@ ul {
 a {
   text-decoration: none;
   cursor: url(../images/сursor.svg), pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 button {
@@ -47,6 +51,10 @@ button {
   cursor: url(../images/сursor.svg), pointer;
   border: none;
   border-radius: 10px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 address {
@@ -55,4 +63,10 @@ address {
 
 label {
   cursor: url(../images/сursor.svg), pointer;
+}
+
+summary {
+  &:focus {
+    outline: none;
+  }
 }

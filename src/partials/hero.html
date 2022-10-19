@@ -1,34 +1,49 @@
 <section class="hero">
   <div class="hero__container">
-    <div class="hero__block-title">
-     <div class = "hero__block-title-left"> 
-    <h1 class="hero__title">ice cream <br />made with <br /><span class="hero__title_passion">passion</span> </h1>
-       <div class="hero__block_links">
-          <a class ="hero__block_link_id hero__button" href="index.html#products">Products</a>
-          <a class ="hero__block_link_id hero__link" href="index.html#about">How it&#700s made?</a>
-      </div>
+    <div class="hero__block">
+     <div class = "hero__block-left"> 
+    <h1 class="hero__title">ice cream <br />made with <br /><span class="hero__title--bigger">passion</span> </h1>
+    <ul class="hero__links">
+        <a class ="hero__link hero__link--products" href="./index.html#products">Products</a>
+          <a class ="hero__link hero__link--about" href="./index.html#about">How it&rsquo;s made?</a>
+    </ul>  
     </div>
-    <div class = "hero__block-title-right"> 
-      <p class="hero__decoration__number">16</p>
-      <p class="hero__decoration__text">cafes</p>
-      <p class="hero__decoration__number  hero__decoration__number--position">23</p>
-      <p class="hero__decoration__text hero__decoration__text--position">food trucks</p> 
-    </div>
-    </div>
+    <ul class = "hero__block-right">
+  <li class = "hero__block-right-item">
+     <p class="hero__number">16</p>
+      <p class="hero__under-number">cafes</p>
+  </li>
+  <li class = "hero__block-right-item">
+     <p class="hero__number">23</p>
+      <p class="hero__under-number">food trucks</p> 
+   
+  </li>
+</ul>
+</div>
   
-    <div class="hero__plate"></div>
-      <p class="hero__img_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-      <details class="hero__img_details">
-        <summary class="hero__img_summary">
-          <svg class="hero__img_icon" width="40" >
-            <use href="./images/symbol-defs.svg#arrow"></use>
+    <div class="hero__decor">
+        <div class="hero__decor--plate">
+        </div>
+        <div class="hero__thumb">
+          <p class="hero__thumb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+          
+      <details class="hero__details">
+        <summary class="hero__summary">
+          <svg class="hero__summary-icon">
+              <use
+                class="hero__summary-svg"
+                href="./images/symbol-defs.svg#arrow"
+              ></use>
+              <use
+                class="hero__summary-svg"
+                href="./images/symbol-defs.svg#fat-arrow"
+              ></use>
           </svg>
         </summary>
-        <p class="hero__img_text_details">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, modi. Sunt porro sapiente quis asperiores
-        eaque aperiam deserunt saepe voluptas repudiandae praesentium inventore maiores iste quidem ea, cum fuga quasi!
-      </p>      
-      </details> 
-     <div class="hero__ice-cream"></div> 
-     <div class="hero__ribbon"></div>    
+        <span class="hero__details-text">Press this arrow once more and I will find you!</span>
+      </details>
+      </div>
+    </div>
+     <div class="hero__decor--icecream"></div> 
+     <div class="hero__decor--ribbon"></div>    
  </section>
