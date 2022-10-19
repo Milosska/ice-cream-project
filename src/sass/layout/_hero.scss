@@ -251,6 +251,24 @@
   }
 }
 
+.hero__summary-svg {
+  &:first-child {
+    display: block;
+
+    .hero__summary:focus & {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    display: none;
+
+    .hero__summary:focus & {
+      display: block;
+    }
+  }
+}
+
 .hero__details-text {
   display: none;
   position: absolute;
