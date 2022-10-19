@@ -136,7 +136,6 @@
   line-height: 1.5;
   font-weight: 120%;
   color: var(--bg-modal);
-  
 
   @include media(min, desktop) {
     display: block;
@@ -148,7 +147,8 @@
     top: 375px;
     width: 151px;
   }
-  @include media(min, phone) {}
+  @include media(min, phone) {
+  }
   display: none;
 }
 .hero__decoration__icecream {
@@ -219,14 +219,14 @@
 .hero__block-title-right {
   @include media(max, phone) {
     display: none;
-   }
-   @include media(min, tablet) {
-  display: flex;
-  flex-direction: column;
-  margin-top: 56px;
-  text-align: right;
-}
-  @include media(min, desktop) { 
+  }
+  @include media(min, tablet) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    text-align: right;
+  }
+  @include media(min, desktop) {
     display: flex;
     flex-direction: column;
     margin-top: 56px;
@@ -372,24 +372,19 @@ summary::-webkit-details-marker {
   }
 }
 .hero__ice-cream {
+  z-index: 1;
   content: '';
   display: block;
   position: absolute;
-  z-index: 2;
-  background-origin: cover;
-  background-repeat: no-repeat;
-  background-size: contain;
   top: 283px;
   left: 82px;
   width: 170px;
   height: 219px;
-  background-image: url('../images/hero/ice-cream-mobile-min.png');
   @include media(min, phone) {
     top: 283px;
     left: 82px;
     width: 170px;
     height: 219px;
-    background-image: url('../images/hero/ice-cream-mobile-min.png');
   }
 
   @include media(min, tablet) {
@@ -397,7 +392,6 @@ summary::-webkit-details-marker {
     left: 418px;
     width: 270px;
     height: 343px;
-    background-image: url('../images/hero/ice-cream-tablet-min.png');
   }
 
   @include media(min, desktop) {
@@ -405,9 +399,43 @@ summary::-webkit-details-marker {
     left: 610px;
     width: 484px;
     height: 590px;
-    background-image: url('../images/hero/ice-cream-desktop-min.png');
   }
 }
+
+.hero__ice-cream::after {
+  z-index: -1;
+  content: '';
+  height: 100%;
+  width: 100%;
+  filter: blur(50px);
+  background: linear-gradient(
+      270deg,
+      rgb(246, 255, 0),
+      rgb(234, 255, 0),
+      white,
+      rgb(4, 255, 0),
+      rgb(2, 255, 91)
+    )
+    0 0/200% 200%;
+  border-radius: 50%;
+  animation: animateGlow 2.5s linear infinite;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  transform: scale(0.6);
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
 .hero__img_text_details {
   position: absolute;
   top: 368px;
