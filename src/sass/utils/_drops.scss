@@ -51,6 +51,10 @@ button {
   cursor: url(../images/сursor.svg), pointer;
   border: none;
   border-radius: 10px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 address {
