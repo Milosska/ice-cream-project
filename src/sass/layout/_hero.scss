@@ -125,33 +125,32 @@
 }
 
 .hero__img_text {
-  position: absolute;
+  
   top: 368px;
   left: 256px;
   width: 200px;
   height: 120px;
-  
   font-family: var(--main-font);
   font-size: 14px;
   line-height: 1.5;
   font-weight: 120%;
   color: var(--bg-modal);
+  @include media(min, phone) {
+  display: none;
+}
+@include media(min, tablet) {
+  display: block;
   
-
+}
   @include media(min, desktop) {
     display: block;
     top: 368px;
     width: 200px;
+    position: absolute;
   }
-  @include media(min, tablet) {
-    display: block;
-    top: 375px;
-    width: 230px;
-    flex-direction: column;
   }
-  @include media(min, phone) {}
-  display: none;
-}
+  
+
 .hero__decoration__icecream {
   width: 170px;
   height: 219px;
@@ -292,15 +291,28 @@ summary::-webkit-details-marker {
   height: 30px;
   width: 50px;
   display: block;
-  position: absolute;
+ 
   top: 480px;
   left: 256px;
+
+  // @include media(min, phone) {
+  //   display: none;
+  // }
+
+  @include media(min, tablet) {
+  
+  }
+
+  @include media(min, desktop) {
+  position: absolute;
+  }
 }
+
 
 .hero__plate {
   display: block;
   position: absolute;
-
+  z-index: 3;
   content: '';
   background-size: contain;
   background-origin: content-box;
@@ -333,23 +345,22 @@ summary::-webkit-details-marker {
 }
 .hero__plate{
  
-    width: 152px;
-  
-    // animation
-    scale: 1;
-    transition-property: transform;
-    transition-duration: 500ms;
-    transition-timing-function: linear;
-    transition-delay: 50ms;
-    // end animation
-  
-    @media screen and (min-width: 1200px) {
-      width: 225px;
+
+  animation: spin 10s linear infinite;
+  animation-play-state: paused;
+  @keyframes spin {
+    100% {
+      transform: rotate(1turn);
     }
-}
-.hero__plate:hover {
-  transform: scale(1.05) rotate(360deg);
-}
+  }
+  &:hover {
+    animation-play-state: running;
+  }
+  }
+   
+
+
+
 .hero__ribbon {
   display: block;
   position: absolute;
@@ -429,7 +440,7 @@ summary::-webkit-details-marker {
   }
 }
 .hero__img_text_details {
-  position: absolute;
+ 
   top: 368px;
   left: 256px;
   width: 200px;
@@ -455,4 +466,26 @@ summary::-webkit-details-marker {
     top: 368px;
     width: 200px;
   }
+}
+
+.hero__decor-element{
+  display: flex;
+  display: none;
+  @media screen and (min-width: 768px) {
+    width: 151px;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 185px;
+    display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 60px;
+  }
+}
+.hero__block-title-left{
+  z-index: 4;
+}
+.hero__styles-decor{
+  z-index: 4;
 }
