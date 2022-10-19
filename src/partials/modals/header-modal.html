@@ -13,9 +13,10 @@
       </button>
 
       <!-- Писати начинку модалки після цієї строки -->
-      <p class="order-form__title">Buy now</p>
 
-      <form class="order-form__group" name="order-form">
+      <form class="order-form" name="order-form">
+        <p class="order-form__title">Buy now</p>
+
         <ul class="checkbox">
           <li class="checkbox__item checkbox__item--green">
             <input
@@ -23,11 +24,11 @@
               type="checkbox"
               name="order"
               value="ice cream"
-              id="ice cream"
+              id="ice-cream"
             />
             <label
               class="checkbox__field checkbox__field--green"
-              for="ice cream"
+              for="ice-cream"
             >
               Ice cream
             </label>
@@ -82,8 +83,8 @@
               type="tel"
               name="phone-number"
               required
-              pattern="((\+|00)?[1-9]{2}|0)[1-9]( ?[0-9]){8}"
-              title="The number should start with a plus sign, followed by the country code and national number"
+              pattern="[+][0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              title="Enter your phone number (format: +61-123-456-7890)."
               placeholder=" "
             />
             <span class="form-field__lable">Phone</span>
@@ -93,6 +94,7 @@
               class="form-field__comment"
               name="comment"
               rows="3"
+              placeholder=" "
             ></textarea>
             <span class="form-field__lable">Comment</span>
           </label>
