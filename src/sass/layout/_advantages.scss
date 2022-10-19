@@ -4,7 +4,7 @@
 
 .advantages__item {
     &:not(:last-child) {
-        @include media(max, phone) {
+        @include media(max, tablet) {
 
             margin-bottom: 20px;
         }
@@ -78,14 +78,14 @@ $pictureList: 'cow',
 
     @include media(max, phone) {
         text-transform: uppercase;
-        margin-bottom: 20px;
+      
     }
 
 
     color: var(--text-white);
 
     @include media(max, tablet) {
-        margin-top: 30px;
+       
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
@@ -124,7 +124,7 @@ $pictureList: 'cow',
 
 .advantages__text {
 
-    margin-bottom: 20px;
+    
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
