@@ -1,99 +1,149 @@
 <section class="reviews">
-    
-<!--============= Розмітка слайдера ==================== -->
-<!-- Основний контейнер -->
-<div class="reviews__container">
-  <!-- Додаткова обгортка -->
-  <div class="reviews__slider swiper">
+  <!--============= Розмітка слайдера ==================== -->
+  <!-- Основний контейнер -->
+  <div class="reviews__container">
+    <!-- Додаткова обгортка -->
+    <div class="reviews__slider swiper">
       <h3 class="reviews__title">Customer reviews</h3>
-        <!-- Слайди -->
-  <ul class="reviews__list swiper-wrapper">
-    <!-- Слайдер 1 -->
-    <li class="reviews__item swiper-slide">
-      <picture>
-        <source
-        srcset="./images/reviews/jpg/photo-1-min.png 1x,
-        ./images/reviews/jpg/photo-1@2x-min.png 2x,
-        ./images/reviews/jpg/photo-1@3x-min.png 3x
-        "
-        type="image/png">
-        <source
-        srcset="./images/reviews/webp/photo-1-min.webp 1x,
-        ./images/reviews/webp/photo-1@2x-min.webp 2x,
-        ./images/reviews/webp/photo-1@3x-min.webp 3x
-        "
-        type="image/webp">
-      <img class="reviews__img" src="./images/reviews/jpg/photo-1-min.png" alt="Emily">
-      </picture>
-      <div class="reviews__description">
-          <p class="reviews__quote">I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.</p></div>
+      <!-- Слайди -->
+      <ul class="reviews__list swiper-wrapper">
+        <!-- Слайдер 1 -->
+        <li class="reviews__item swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./images/reviews/jpg/photo-1-min.png    1x,
+                ./images/reviews/jpg/photo-1@2x-min.png 2x,
+                ./images/reviews/jpg/photo-1@3x-min.png 3x
+              "
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/reviews/webp/photo-1-min.webp    1x,
+                ./images/reviews/webp/photo-1@2x-min.webp 2x,
+                ./images/reviews/webp/photo-1@3x-min.webp 3x
+              "
+              type="image/webp"
+            />
+            <img
+              class="reviews__img"
+              src="./images/reviews/jpg/photo-1-min.png"
+              alt="Emily"
+            />
+          </picture>
+          <div class="reviews__description">
+            <p class="reviews__quote">
+              I love visiting your cafe. You prepare the most delicious ice
+              cream in Los Angeles! In addition, you have beautiful serving,
+              cozy atmosphere and polite staff.
+            </p>
+          </div>
           <p class="reviews__info">Emily, Los Angeles</p>
-    </li>
-    <!-- Слайдер 2 -->
-    <li class="reviews__item swiper-slide">
-      <picture>
-        <source
-        srcset="./images/reviews/jpg/photo-2-min.png 1x,
-        ./images/reviews/jpg/photo-2@2x-min.png 2x,
-        ./images/reviews/jpg/photo-2@3x-min.png 3x
-        "
-        type="image/png">
-        <source
-        srcset="./images/reviews/webp/photo-2-min.webp 1x,
-        ./images/reviews/webp/photo-2@2x-min.webp 2x,
-        ./images/reviews/webp/photo-2@3x-min.webp 3x
-        "
-        type="image/webp">
-      <img class="reviews__img" src="./images/reviews/jpg/photo-2-min.png" alt="Bryan">
-      </picture>
-      <div class="reviews__description">
-        <p class="reviews__quote">Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!</p></div>
-        <p class="reviews__info">Bryan, New-York</p>
-  </li>
-    <!-- Слайдер 3 -->
-    <li class="reviews__item swiper-slide">
-      <picture>
-        <source
-        srcset="./images/reviews/jpg/photo-3-min.png 1x,
-        ./images/reviews/jpg/photo-3@2x-min.png 2x,
-        ./images/reviews/jpg/photo-3@3x-min.png 3x
-        "
-        type="image/png">
-        <source
-        srcset="./images/reviews/webp/photo-3-min.webp 1x,
-        ./images/reviews/webp/photo-3@2x-min.webp 2x,
-        ./images/reviews/webp/photo-3@3x-min.webp 3x
-        "
-        type="image/webp">
-      <img class="reviews__img"  src="./images/reviews/jpg/photo-3-min.png" alt="Diana">
-      </picture>
-      <div class="reviews__description">
-        <p class="reviews__quote">Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!</p></div>
-        <p class="reviews__info">Diana, Chicago</p>
-  </li>
-  <!-- Слайдер 4 -->
-    <li class="reviews__item swiper-slide">
-      <picture>
-        <source
-        srcset="./images/reviews/jpg/photo-4-min.png 1x,
-        ./images/reviews/jpg/photo-4@2x-min.png 2x,
-        ./images/reviews/jpg/photo-4@3x-min.png 3x
-        "
-        type="image/png">
-        <source
-        srcset="./images/reviews/webp/photo-4-min.webp 1x,
-        ./images/reviews/webp/photo-4@2x-min.webp 2x,
-        ./images/reviews/webp/photo-4@3x-min.webp 3x
-        "
-        type="image/webp">
-      <img class="reviews__img" src="./images/reviews/jpg/photo-4-min.png"alt="Sam">
-      </picture>
-      <div class="reviews__description">
-        <p class="reviews__quote">I love eating popsicles on a hot day. Yours is always delicious. I recommend your cafe to everyone I know.</p></div>
-        <p class="reviews__info">Sam, Los Angeles</p>
-  </li>
-  </ul>
-  <!-- Пагінація (крапочки) -->
-  <div class="swiper-pagination"></div>
+        </li>
+        <!-- Слайдер 2 -->
+        <li class="reviews__item swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./images/reviews/jpg/photo-2-min.png    1x,
+                ./images/reviews/jpg/photo-2@2x-min.png 2x,
+                ./images/reviews/jpg/photo-2@3x-min.png 3x
+              "
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/reviews/webp/photo-2-min.webp    1x,
+                ./images/reviews/webp/photo-2@2x-min.webp 2x,
+                ./images/reviews/webp/photo-2@3x-min.webp 3x
+              "
+              type="image/webp"
+            />
+            <img
+              class="reviews__img"
+              src="./images/reviews/jpg/photo-2-min.png"
+              alt="Bryan"
+            />
+          </picture>
+          <div class="reviews__description">
+            <p class="reviews__quote">
+              Every day we come to you with friends after classes in college. We
+              love your ice cream and casual atmosphere!
+            </p>
+          </div>
+          <p class="reviews__info">Bryan, New-York</p>
+        </li>
+        <!-- Слайдер 3 -->
+        <li class="reviews__item swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./images/reviews/jpg/photo-3-min.png    1x,
+                ./images/reviews/jpg/photo-3@2x-min.png 2x,
+                ./images/reviews/jpg/photo-3@3x-min.png 3x
+              "
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/reviews/webp/photo-3-min.webp    1x,
+                ./images/reviews/webp/photo-3@2x-min.webp 2x,
+                ./images/reviews/webp/photo-3@3x-min.webp 3x
+              "
+              type="image/webp"
+            />
+            <img
+              class="reviews__img"
+              src="./images/reviews/jpg/photo-3-min.png"
+              alt="Diana"
+            />
+          </picture>
+          <div class="reviews__description">
+            <p class="reviews__quote">
+              Ice cream is my passion! I love your chocolate hazelnut ice cream!
+              And I really like the excellent service - always served politely
+              and quickly!
+            </p>
+          </div>
+          <p class="reviews__info">Diana, Chicago</p>
+        </li>
+        <!-- Слайдер 4 -->
+        <li class="reviews__item swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./images/reviews/jpg/photo-4-min.png    1x,
+                ./images/reviews/jpg/photo-4@2x-min.png 2x,
+                ./images/reviews/jpg/photo-4@3x-min.png 3x
+              "
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./images/reviews/webp/photo-4-min.webp    1x,
+                ./images/reviews/webp/photo-4@2x-min.webp 2x,
+                ./images/reviews/webp/photo-4@3x-min.webp 3x
+              "
+              type="image/webp"
+            />
+            <img
+              class="reviews__img"
+              src="./images/reviews/jpg/photo-4-min.png"
+              alt="Sam"
+            />
+          </picture>
+          <div class="reviews__description">
+            <p class="reviews__quote">
+              I love eating popsicles on a hot day. Yours is always delicious. I
+              recommend your cafe to everyone I know.
+            </p>
+          </div>
+          <p class="reviews__info">Sam, Los Angeles</p>
+        </li>
+      </ul>
+      <!-- Пагінація (крапочки) -->
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </section>
