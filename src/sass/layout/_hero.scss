@@ -35,6 +35,9 @@
   @include font-size(26px, 33px);
   text-transform: uppercase;
 
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    text-align: center;
+  }
   @include media(min, tablet) {
     padding-top: 12px;
     margin-bottom: 20px;
@@ -68,8 +71,17 @@
   position: relative;
   z-index: 1;
 
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    @include flex(80px, center, center);
+    padding-right: 32px;
+  }
+
+  @include media(min, tablet) {
+    justify-content: space-evenly;
+  }
   @include media(min, desktop) {
     margin-bottom: 32px;
+    justify-content: center;
   }
 }
 
@@ -276,6 +288,10 @@
   background-size: contain;
   @include bg-picture(hero, ribbon-mobile, png);
 
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    background-position: 50% 50%;
+  }
+
   @include media(min, tablet) {
     @include bg-picture(hero, ribbon-tablet, png);
     width: 768px;
@@ -301,6 +317,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   @include bg-picture(hero, ice-cream-mobile, png);
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    background-position: 80% 50%;
+  }
 
   @include media(min, tablet) {
     @include bg-picture(hero, ice-cream-tablet, png);
