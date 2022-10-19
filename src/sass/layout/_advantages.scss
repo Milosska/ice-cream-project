@@ -1,7 +1,247 @@
-.advantages__container{
+.advantages__container {
     @extend %container
 }
 
-.advantages__cow{
-    background-image: url(../images/advantages/cow-min.png)
+.advantages__item {
+    &:not(:last-child) {
+        @include media(max, tablet) {
+
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &::before {
+        margin-bottom: 16px;
+
+        @include pseudo(50px, 50px);
+        @extend %centred;
+
+        @include media(min, tablet) {
+            @include flex(30px, center, center);
+            flex-wrap: nowrap;
+            margin-bottom: 30px;
+        }
+
+        @include media(min, desktop) {
+            @include flex(30px, center, center);
+            flex-wrap: nowrap;
+            margin-bottom: 40px;
+        }
+
+        display: block;
+        background-image: url(../images/advantages/cow-min.png);
+        background-color:var(--button-yellow);
+        border-radius: 50%;
+        background-size: 36px 36px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+
+
+
+    }
+
+
 }
+
+$pictureList: 'cow',
+    'weight',
+    'ice-crema';
+
+
+@each $picture in $pictureList {
+    .advantages__item--#{$picture}::before {
+        background-image: url('../images/advantages/#{$picture}-min.png');
+    }
+}
+
+
+
+// Tablet
+
+.advantages__headline {
+
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+
+    font-size: 36px;
+    letter-spacing: 4%;
+    line-height: 42px;
+    /* identical to box height */
+
+    text-align: center;
+
+
+    @include media(max, phone) {
+        text-transform: uppercase;
+      
+    }
+
+
+    color: var(--text-white);
+
+    @include media(max, tablet) {
+       
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+        text-align: center;
+        letter-spacing: 0.04em;
+
+    }
+
+    @include media(min, tablet) {
+
+
+
+        @include flex(30px, center, center);
+        flex-wrap: nowrap;
+        margin-bottom: 0px;
+
+    }
+
+    @include media(min, desktop) {
+        @include flex(30px, center, center);
+        flex-wrap: nowrap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 71px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        margin-bottom: 16px;
+
+
+    }
+}
+
+.advantages__text {
+
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 170%;
+    /* or 20px */
+
+    text-align: center;
+    color: var(--text-white);
+
+    @include media(min, phone) {
+        @include flex(30px, center, center);
+        flex-wrap: nowrap;
+
+
+    }
+
+    @include media(min, tablet) {
+        @include flex(30px, center, center);
+        flex-wrap: nowrap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 174%;
+        /* or 24px */
+
+        text-align: center;
+        // margin-top: 15px;
+    }
+
+    @include media(min, desktop) {
+        @include flex(30px, center, center);
+        flex-wrap: nowrap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 176%;
+        /* or 28px */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+
+        color: #FCFCFC;
+    }
+}
+
+.advantages__all {
+    @include flex-basis(9, 30px);
+
+    @include media(min, tablet) {
+        @include flex(30px, center, center);
+        flex-wrap: nowrap;
+    }
+
+    @include media(min, desktop) {
+        @include flex(30px, center, center);
+        flex-wrap: nowrap;
+    }
+}
+
+
+
+
+.advantages__item {
+    &::before {
+        animation: bounce-in 2s ease infinite;
+    }
+
+    @keyframes bounce-in {
+        0% {
+            opacity: 0;
+            transform: scale(.3);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        70% {
+            transform: scale(.9);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+}
+
+
+
+
+// .circle:hover .circle {
+//     transform: scale(1.5);
+// }
+
+// .circle {
+//     transition-property: transform;
+//     &:nth-child(1) {
+
+
+//             transition-duration: 500ms;
+//         }
+
+//         &:nth-child(2) {
+
+
+//             transition-duration: 1500ms;
+//         }
+
+//         &:nth-child(3) {
+
+
+//             transition-duration: 3000ms;
+//         }
+// }
