@@ -29,7 +29,7 @@
 .hero__title {
   padding-right: 32px;
   margin-bottom: 32px;
-
+  text-align: center;
   font-family: var(--heading-font);
   font-weight: 400;
   @include font-size(26px, 33px);
@@ -67,11 +67,16 @@
   @include flex(8px, flex-start, center);
   position: relative;
   z-index: 1;
-
+  justify-content: space-around;
   @include media(min, desktop) {
     margin-bottom: 32px;
+    justify-content: center;
+  }
+  @include media(min, tablet) {
+    justify-content: space-evenly;
   }
 }
+ 
 
 .hero__link--products {
   @include button-styles(stroke, 8px, 10px);
@@ -280,12 +285,14 @@
     @include bg-picture(hero, ribbon-tablet, png);
     width: 768px;
     height: 68px;
+    
   }
 
   @include media(min, desktop) {
     @include bg-picture(hero, ribbon-desktop, png);
     width: 1200px;
     height: 384px;
+  
   }
 }
 
