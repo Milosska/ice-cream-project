@@ -1,5 +1,5 @@
 .modal{
- 
+  @extend %centred;
   left: 50%;
   top: 50%;
 
@@ -189,8 +189,12 @@ letter-spacing: 0.04em;
 // =====Form======
 
 .register-form{
-
+  @extend %centred;
   display: block;
+  width: 240px;
+  @media screen and (min-width: 480px){
+    width: 368px;
+  }
 
 }
 .register-form__field{
@@ -198,11 +202,14 @@ letter-spacing: 0.04em;
 
 }
 .register-form__label{
+  
   display: block;
   margin-bottom: 8px;
+
 }
 
 .register-form__input{
+  @extend %centred;
   margin-bottom: 10px;
   width: 240px;
   height: 42px;
@@ -210,7 +217,7 @@ letter-spacing: 0.04em;
 border: 1px solid #84A178;
 border-radius: 10px;
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 480px){
   width: 368px;
 }
 
@@ -221,8 +228,12 @@ border-radius: 10px;
 //   border-color: #2196F3;
 // }
 .register-form__message{
+  width: 240px;
   display: block;
   margin-bottom: 8px;
+  @media screen and (min-width: 480px){
+    width: 368px;
+  }
 
 }
 .register-form__textarea{
@@ -232,7 +243,7 @@ border-radius: 10px;
   background: rgba(248, 210, 78, 0.1);
 border: 1px solid #84A178;
 border-radius: 10px;
-@media screen and (min-width: 768px){
+@media screen and (min-width: 480px){
   width: 368px;
 }
 }
