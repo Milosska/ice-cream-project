@@ -198,14 +198,97 @@ letter-spacing: 0.04em;
 
 }
 .register-form__field{
+  // display: block;
+  position: relative;
+
   display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &:not(:last-child) {
+    @include media(min, tablet) {
+      margin-bottom: 16px;
+    }
+  }
 
 }
 .register-form__label{
   
-  display: block;
-  margin-bottom: 8px;
+  // display: block;
+  // margin-bottom: 8px;
+  position: absolute;
+  top: 44%;
+  left: 12px;
+  transform: translateY(-50%);
 
+  font-size: 12px;
+  line-height: 140%;
+
+  margin-bottom: 4px;
+
+  @include media(min, tablet) {
+    font-size: 14px;
+    left: 16px;
+  }
+
+  @include animation(transform);
+
+}
+
+.register-form__label.label {
+  transform: translateY(-150%);
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    transform: translateY(-175%);
+  }
+
+  @include media(min, tablet) {
+    transform: translateY(-170%);
+  }
+
+  @include animation(transform);
+}
+
+.register-form__input:focus + .register-form__label, 
+.register-form__input:not(:placeholder-shown) + .register-form__label {
+  transform: translate(-10px, -248%);
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    transform: translate(-10px, -247%);
+  }
+
+  @include media(min, tablet) {
+    transform: translate(-12px, -220%);
+  }
+}
+
+
+.register-form__comment{
+  margin-bottom: 32px;
+  width: 240px;
+  height: 84px;
+  background: rgba(248, 210, 78, 0.1);
+border: 1px solid #84A178;
+border-radius: 10px;
+@media screen and (min-width: 480px){
+  width: 368px;
+}
+}
+
+.register-form__comment:focus + .register-form__label.label,
+.register-form__comment:not(:placeholder-shown) +
+.register-form__label.label {
+  transform: translate(-10px, -417%);
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    transform: translate(-10px, -361%);
+  }
+
+  @include media(min, tablet) {
+    transform: translate(-16px, -315%);
+  }
 }
 
 .register-form__input{
@@ -220,30 +303,65 @@ border-radius: 10px;
 @media screen and (min-width: 480px){
   width: 368px;
 }
+@include animation(border-color);
 
+&:focus {
+  border-color: var(--button-green);
 }
 
-// .register-form__input:focus,
-// .register-form__input:hover{
-//   border-color: #2196F3;
-// }
-.register-form__message{
-  width: 240px;
-  display: block;
-  margin-bottom: 8px;
-  @media screen and (min-width: 480px){
-    width: 368px;
-  }
+&::placeholder {
+  opacity: 0;
 
+  @include animation(opacity);
 }
-.register-form__textarea{
-  margin-bottom: 32px;
+
+&:focus::placeholder {
+  opacity: 1;
+}
+}
+
+.register-form__comment {
   width: 240px;
   height: 84px;
-  background: rgba(248, 210, 78, 0.1);
-border: 1px solid #84A178;
-border-radius: 10px;
-@media screen and (min-width: 480px){
-  width: 368px;
-}
+
+  resize: none;
+
+  background-color: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  outline: transparent;
+
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-left: 12px;
+
+  @media screen and (min-width: 480px) and (max-width: 767.5px) {
+    width: 368px;
+    height: 64px;
+  }
+
+  @include media(min, tablet) {
+    width: 368px;
+    height: 64px;
+
+    padding-top: 11px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  @include animation(border-color);
+
+  &:focus {
+    border-color: var(--button-green);
+  }
+
+  &::placeholder {
+    opacity: 0;
+
+    @include animation(opacity);
+  }
+
+  &:focus::placeholder {
+    opacity: 1;
+  }
 }

@@ -63,37 +63,37 @@
         <span class="ingredients__item--right">10g</span>
       </li>
     </ul>
-    <form class="register-form" name="register form" autocomplete="on">
+
+    <form class="register-form" name="register-form" autocomplete="on">
       <label class="register-form__field">
-        <span class="register-form__label">Name</span>
         <input
           class="register-form__input"
           type="text"
-          name=""
+          name="user-name"
+          placeholder="John Doe"
           required
-          placeholder="John Dou"
         />
+        <p class="register-form__label">Name</p>
       </label>
-
       <label class="register-form__field">
-        <span class="register-form__label">Phone</span>
         <input
           class="register-form__input"
           type="tel"
-          name=""
-          required
+          name="user-phone"
+          maxlength="13"
           placeholder="+38 055 555 55 55"
+          required
         />
+        <p class="register-form__label">Phone</p>
       </label>
-
       <label class="register-form__field">
-        <span class="register-form__message">Comment</span>
         <textarea
-          class="register-form__textarea"
-          name=""
-          rows="5"
+          class="register-form__comment"
+          name="comment"
+          rows="4"
           placeholder="Comment"
         ></textarea>
+        <p class="register-form__label label">Comment</p>
       </label>
 
       <!-- Закінчення начинки модалки -->
