@@ -292,6 +292,16 @@
     }
 
     @include animation-m(transform, border);
+
+    &::placeholder {
+      opacity: 0;
+
+      @include animation(opacity);
+    }
+
+    &:focus::placeholder {
+      opacity: 1;
+    }
   }
 
   &__input:not(:placeholder-shown):required:invalid {
