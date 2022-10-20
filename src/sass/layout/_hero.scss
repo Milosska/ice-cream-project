@@ -69,7 +69,7 @@
 .hero__links {
   @include flex(8px, flex-start, center);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   @media screen and (min-width: 480px) and (max-width: 767px) {
     @include flex(80px, center, center);
