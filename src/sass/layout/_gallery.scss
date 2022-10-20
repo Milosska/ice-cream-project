@@ -8,7 +8,7 @@ $time_per_slide: 5;
 $total_animation_time: $time_per_slide * $slides;
 
 .gallery {
-  background-color: transparent;
+  background-color: var(--bg-main);
 }
 
 .gallery__container {
