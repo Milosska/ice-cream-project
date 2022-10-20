@@ -1,34 +1,21 @@
 .reviews {
-  height: 939px;
-  width: 100%;
-  max-width: 1600px;
   margin: 0 auto;
   padding-top: 80px;
   padding-bottom: 10px;
   background: transparent;
 
-  @media screen and (min-width: map-get($breakpoints, 'phone')) {
-    padding-top: 223px;
-  }
-
   @media screen and (min-width: map-get($breakpoints, 'tablet')) {
-    height: 959px;
+    padding-top: 60px;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'desktop')) {
-    height: 1013px;
-    padding-top: 456px;
+    padding-top: 128px;
   }
 }
 
 .reviews__container {
   @extend %container;
   overflow: visible;
-  padding: 56px 20px 394px;
-
-  @media screen and (min-width: 768px) {
-    margin-top: -104px;
-  }
 }
 
 .reviews__title {
