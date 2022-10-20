@@ -1,6 +1,16 @@
 .advantages {
+  padding-top: 42px;
   padding-bottom: 36px;
+
+  @include media(min, tablet) {
+    padding-top: 53px;
+  }
+
+  @include media(min, tablet) {
+    padding-top: 60px;
+  }
 }
+
 .advantages__container {
   @extend %container;
 }

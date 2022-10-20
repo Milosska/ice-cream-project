@@ -2,7 +2,7 @@
   margin: 0 auto;
   padding-top: 80px;
   padding-bottom: 10px;
-  background: transparent;
+  // background-color: var(--bg-modal);
 
   @media screen and (min-width: map-get($breakpoints, 'tablet')) {
     padding-top: 60px;

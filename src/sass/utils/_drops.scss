@@ -1,11 +1,166 @@
 body {
-  background-color: var(--bg-main);
+  // background-color: var(--bg-main);
   color: var(--text-white);
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.04em;
   cursor: url(../images/сursor.svg), auto;
+
+  background-image: url('../images/background/mobile/mobile-bg-1-min.png'),
+    linear-gradient(
+      to bottom,
+      #84a178 503px,
+      #fcfcfc 503px,
+      #fcfcfc 1771px,
+      #84a178 1771px,
+      #84a178 4313px,
+      #fcfcfc 4313px,
+      #fcfcfc 5244px,
+      #84a178 5244px
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 931px, 100% 100%;
+  background-position: top 4313px left 0, 0 0;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/background/mobile/mobile-bg-1@2x-min.png'),
+      linear-gradient(
+        to bottom,
+        #84a178 503px,
+        #fcfcfc 503px,
+        #fcfcfc 1771px,
+        #84a178 1771px,
+        #84a178 4313px,
+        #fcfcfc 4313px,
+        #fcfcfc 5244px,
+        #84a178 5244px
+      );
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url('../images/background/mobile/mobile-bg-1@3x-min.png'),
+      linear-gradient(
+        to bottom,
+        #84a178 503px,
+        #fcfcfc 503px,
+        #fcfcfc 1771px,
+        #84a178 1771px,
+        #84a178 4313px,
+        #fcfcfc 4313px,
+        #fcfcfc 5244px,
+        #84a178 5244px
+      );
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/background/tablet/tablet-bg-min.png'),
+      linear-gradient(
+        to bottom,
+        #84a178 415px,
+        #fcfcfc 415px,
+        #fcfcfc 1257px,
+        #84a178 1257px,
+        #84a178 2275px,
+        #fcfcfc 2275px,
+        #fcfcfc 3193px,
+        #84a178 3193px
+      );
+
+    background-repeat: no-repeat;
+    background-size: 100% 918px, 100% 100%;
+    background-position: top 2275px left 0, 0 0;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/background/tablet/tablet-bg@2x-min.png'),
+        linear-gradient(
+          to bottom,
+          #84a178 415px,
+          #fcfcfc 415px,
+          #fcfcfc 1257px,
+          #84a178 1257px,
+          #84a178 2275px,
+          #fcfcfc 2275px,
+          #fcfcfc 3193px,
+          #84a178 3193px
+        );
+    }
+
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: url('../images/background/tablet/tablet-bg@3x-min.png'),
+        linear-gradient(
+          to bottom,
+          #84a178 415px,
+          #fcfcfc 415px,
+          #fcfcfc 1257px,
+          #84a178 1257px,
+          #84a178 2275px,
+          #fcfcfc 2275px,
+          #fcfcfc 3193px,
+          #84a178 3193px
+        );
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url('../images/background/desktop/desktop-bg-min.png'),
+      linear-gradient(
+        to bottom,
+        #84a178 664px,
+        #fcfcfc 664px,
+        #fcfcfc 1581px,
+        #84a178 1581px,
+        #84a178 2804px,
+        #fcfcfc 2804px,
+        #fcfcfc 3724px,
+        #84a178 3724px
+      );
+    background-repeat: no-repeat;
+    background-size: 100% 920px, 100% 100%;
+    background-position: top 2804px left 0, 0 0;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/background/desktop/desktop-bg@2x-min.png'),
+        linear-gradient(
+          to bottom,
+          #84a178 664px,
+          #fcfcfc 664px,
+          #fcfcfc 1581px,
+          #84a178 1581px,
+          #84a178 2804px,
+          #fcfcfc 2804px,
+          #fcfcfc 3724px,
+          #84a178 3724px
+        );
+    }
+
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: url('../images/background/desktop/desktop-bg@3x-min.png'),
+        linear-gradient(
+          to bottom,
+          #84a178 664px,
+          #fcfcfc 664px,
+          #fcfcfc 1581px,
+          #84a178 1581px,
+          #84a178 2804px,
+          #fcfcfc 2804px,
+          #fcfcfc 3724px,
+          #84a178 3724px
+        );
+    }
+  }
 
   &.modal.active {
     height: 100vh;
