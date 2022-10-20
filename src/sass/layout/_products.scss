@@ -19,18 +19,18 @@
       url('../images/background/mobile/mobile-bg-2@3x-min.png'),
       url('../images/background/mobile/mobile-bg-3@3x-min.png');
   }
-  background-position: top 0 left 0, top 700px left 0, top 1400px left 0;
-  background-size: 480px 700px;
+  background-position: top 0 left 0, top 750px left 0, top 1500px left 0;
+  background-size: 100% 750px, 100% 750px, 100% 750px;
   background-repeat: no-repeat;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     background-image: url(../images/background/tablet/tablet-bg-min.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/background/tablet/tablet-bg@2x-min.png);
     }
-    background-size: auto 852px;
+    background-size: 100% 852px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -65,10 +65,10 @@
   margin-bottom: 148px;
   @extend %title;
   color: var(--text-black);
-  @media screen and(min-width: 768px){
+  @media screen and(min-width: 768px) {
     margin-bottom: 160px;
   }
-  @media screen and(min-width: 1200px){
+  @media screen and(min-width: 1200px) {
     margin-bottom: 175px;
   }
 }
@@ -156,7 +156,7 @@
 .products__item {
   margin-bottom: 164px;
   @extend %centred;
-  @media screen and(min-width: 768px){
+  @media screen and(min-width: 768px) {
     margin-bottom: 0;
   }
 }
