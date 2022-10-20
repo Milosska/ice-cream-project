@@ -1,27 +1,32 @@
 //how many images we have
-// $slides: 5;
+$slides: 5;
 
-// // how much we want each slide to show
-// $time_per_slide: 4;
+// how much we want each slide to show
+$time_per_slide: 4;
 
-// // total time needed for full animation
-// $total_animation_time: $time_per_slide * $slides;
+// total time needed for full animation
+$total_animation_time: $time_per_slide * $slides;
 
 .gallery {
-  background-color: #f5f5f5;
-  // background: transparent;
-  // height: ;
+  @extend %container;
+  // background-color: #f5f5f5;
+  background: transparent;
   width: 100%;
   max-width: 1600px;
 }
 
+.gallery__title {
+  @extend %visually-hidden;
+}
+
 .gallery__box {
-  // position: relative;
-  margin: -24px auto 0;
+  // margin: -24px auto 0;
+  margin: 0 auto;
   width: 279px;
   height: 130px;
   border-radius: 7.40681px;
   overflow: hidden;
+  position: relative;
 
   @include media(min, tablet) {
     width: 704px;
@@ -37,64 +42,27 @@
     margin: -95px auto 0;
   }
 }
-.gallery__list {
-}
+
 .gallery__img {
   height: 100%;
-  // position: absolute;
-  // animation: round #{$total_animation_time}s infinite;
-  // opacity: 0;
+  width: 100%;
+
+  position: absolute;
+  animation: round #{$total_animation_time}s infinite;
+  opacity: 0;
 }
-// @keyframes round {
-//   25% {
-//     opacity: 1;
-//   }
-//   40% {
-//     opacity: 0;
-//   }
-// }
 
-// @for $index from 1 to $slides + 1 {
-//   img:nth-child(#{$index}) {
-//     animation-delay: #{$total_animation_time - $time_per_slide * $index}s;
-//   }
-// }
+@keyframes round {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
 
-//how many images we have
-// $slides: 2;
-
-// // how much we want each slide to show
-// $time_per_slide: 4;
-
-// // total time needed for full animation
-// $total_animation_time: $time_per_slide * $slides;
-
-// .gallery {
-//   background: #000;
-// }
-// .gallery__box {
-//   margin: 50px auto;
-//   width: 500px;
-//   height: 300px;
-//   overflow: hidden;
-//   position: relative;
-// }
-// .gallery__img {
-//   position: absolute;
-//   animation: round #{$total_animation_time}s infinite;
-//   opacity: 0;
-// }
-// @keyframes round {
-//   25% {
-//     opacity: 1;
-//   }
-//   40% {
-//     opacity: 0;
-//   }
-// }
-
-// @for $index from 1 to $slides + 1 {
-//   img:nth-child(#{$index}) {
-//     animation-delay: #{$total_animation_time - $time_per_slide * $index}s;
-//   }
-// }
+@for $index from 1 to $slides + 1 {
+  img:nth-child(#{$index}) {
+    animation-delay: #{$total_animation_time - $time_per_slide * $index}s;
+  }
+}
