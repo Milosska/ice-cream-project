@@ -1,0 +1,36 @@
+.location__text {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.location__img {
+  width: 448px;
+  height: 260px;
+  margin: auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.location__button {
+  width: 145px;
+  height: 42px;
+  background: #f8d24e;
+}
+.location__button .location__button-text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #131313;
+}
