@@ -8,7 +8,7 @@ $time_per_slide: 5;
 $total_animation_time: $time_per_slide * $slides;
 
 .gallery {
-  background-color: var(--bg-main);
+  // background-image: linear-gradient(to bottom, #84a178 24px, #fcfcfc 24px);
 }
 
 .gallery__container {
@@ -25,6 +25,7 @@ $total_animation_time: $time_per_slide * $slides;
   width: 280px;
   height: 130px;
   border-radius: 7.5px;
+  background-color: #fff;
   overflow: hidden;
 
   @include media(min, phone) {
