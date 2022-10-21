@@ -329,7 +329,7 @@
   z-index: 1;
 
   display: block;
-  width: 400px;
+  width: 300px;
   height: 350px;
 
   background-repeat: no-repeat;
@@ -337,13 +337,14 @@
   @include bg-picture(hero, ice-cream-mobile, png);
 
   @media screen and (min-width: 480px) and (max-width: 767px) {
+    left: 100px;
     background-position: 80% 50%;
   }
 
   @include media(min, tablet) {
     @include bg-picture(hero, ice-cream-tablet, png);
-    right: -50px;
-    width: 450px;
+    right: 0;
+    width: 400px;
     height: 450px;
   }
 
