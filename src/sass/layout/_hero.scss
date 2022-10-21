@@ -355,9 +355,9 @@
 
   @include media(min, desktop) {
     @include bg-picture(hero, ice-cream-desktop, png);
-    right: -100px;
+    right: 0;
     bottom: -97px;
-    width: 750px;
+    width: 650px;
     height: 750px;
   }
 }
