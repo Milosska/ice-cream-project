@@ -189,8 +189,13 @@
   }
   // animation end
 
+  @include media(min, tablet) {
+    margin-top: 10px;
+  }
+
   @include media(min, desktop) {
     @include bg-picture(hero, plate-desktop, png);
+    margin-top: 0;
     width: 225px;
     height: 225px;
   }
