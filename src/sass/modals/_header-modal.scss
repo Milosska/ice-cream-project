@@ -251,6 +251,7 @@
 
 .form-field {
   position: relative;
+  margin-top: 4px;
 
   @include media(min, tablet) {
     width: 368px;
