@@ -257,6 +257,15 @@
   border-color: #dc143c;
 }
 
+.register-form__input:hover,
+.register-form__comment:hover {
+  border: 3px solid #84a178;
+}
+
+.register-form__input:focus,
+.register-form__comment:focus {
+  border: 3px solid #84a178;
+}
 // input {
 //   &:valid {
 //     border: 1px solid green;
@@ -300,6 +309,7 @@
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84a178;
   border-radius: 10px;
+  outline: transparent;
 
   @media screen and (min-width: 480px) {
     width: 368px;
@@ -307,7 +317,7 @@
   @include animation(border-color);
 
   &:focus {
-    border-color: var(--button-green);
+    border-color: #84a178;
   }
 
   &::placeholder {
