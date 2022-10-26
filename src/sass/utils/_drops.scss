@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   // background-color: var(--bg-main);
   color: var(--text-white);
@@ -111,7 +115,7 @@ body {
   }
 
   @media screen and (min-width: 1200px) {
-    background-image: url('../images/background/desktop/desktop-bg-min.png'),
+    background-image: url('../images/background/bigger/second-big-desktop-bg-min.png'),
       linear-gradient(
         to bottom,
         #84a178 664px,
@@ -130,7 +134,7 @@ body {
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url('../images/background/desktop/desktop-bg@2x-min.png'),
+      background-image: url('../images/background/bigger/second-big-desktop-bg@2x-min.png'),
         linear-gradient(
           to bottom,
           #84a178 664px,
@@ -147,7 +151,7 @@ body {
     @media (min-device-pixel-ratio: 3),
       (min-resolution: 288dpi),
       (min-resolution: 3dppx) {
-      background-image: url('../images/background/desktop/desktop-bg@3x-min.png'),
+      background-image: url('../images/background/bigger/second-big-desktop-bg@3x-min.png'),
         linear-gradient(
           to bottom,
           #84a178 664px,
