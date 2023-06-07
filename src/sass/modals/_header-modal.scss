@@ -13,19 +13,11 @@
 .modal__btn {
   top: 8px;
   right: 8px;
-  // color: #000000;
-
-  // @include animation(color);
 
   @include media(min, tablet) {
     top: 20px;
     right: 20px;
   }
-
-  // &:hover,
-  // &:focus {
-  //   color: var(--button-green);
-  // }
 }
 
 .order-form {
