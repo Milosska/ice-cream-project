@@ -1,101 +1,96 @@
-**Read in other languages: [Русский](README.md), [Polski](README.pl.md).**
+# Ice-Cream Landing Page
 
-# Parcel template
+This project was created with the aim of increasing ice cream sales and
+expanding the network of ice cream shops. It can be used as an independent
+advertising platform or as an actual addition to large-scale offline advertising
+campaigns of the network.
 
-Этот проект был создан при помощи Parcel. Для знакомства и настройки
-дополнительных возможностей [обратись к документации](https://parceljs.org/).
+![IceCream](./assets/01.jpg)
 
-## Подготовка нового проекта
+The project was develloped by 'We do IT' team.  
+Team leader: <a href="https://github.com/Milosska">Liudmyla Deinychenko</a>  
+Scrum master: <a href="https://github.com/SergyChamata">Serhyi Chamata</a>
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Склонируй этот репозиторий.
-3. Измени имя папки с `parcel-project-template` на имя своего проекта.
-4. Создай новый пустой репозиторий на GitHub.
-5. Открой проект в VSCode, запусти терминал и свяжи проект с GitHub-репозиторием
-   [по инструкции](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url).
-6. Установи зависимости проекта в терминале командой `npm install` .
-7. Запусти режим разработки, выполнив команду `npm start`.
-8. Перейди в браузере по адресу [http://localhost:1234](http://localhost:1234).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+### Header-Hero section
 
-## Файлы и папки
+The header of the landing page includes section navigation, provides user with
+information about current number of cafes and food trucks working within the
+network, and is supplemented with visual effects, due to which the consumer can
+spend a lot of time on the site imperceptibly for himself. It also includes "Buy
+now" button, that opens the modal window, where cosumer can quickly make the
+order.
 
-- Все паршалы файлов стилей должны лежать в папке `src/sass` и импортироваться в
-  файлы стилей страниц. Например, для `index.html` файл стилей называется
-  `index.scss`.
-- Изображения добавляй в папку `src/images`. Сборщик оптимизирует их, но только
-  при деплое продакшн версии проекта. Все это происходит в облаке, чтобы не
-  нагружать твой компьютер, так как на слабых машинах это может занять много
-  времени.
+![IceCreamHeaderModal](./assets/02.jpg)
 
-## Деплой
+Developers: <a href="https://github.com/IrynaVal">Iryna Petrenko</a>,
+<a href="https://github.com/dariia-velychko">Daria Velychko</a>
 
-Для настройки деплоя проекта необходимо выполнить несколько дополнительных шагов
-по настройке твоего репозитория. Зайди во вкладку `Settings` и в подсекции
-`Actions` выбери выбери пункт `General`.
+### Products section
 
-![GitHub actions settings](./assets/actions-config-step-1.png)
+This section provides consumer with information about products for sale, their
+ingredients, and allows to open a modal window with the nutritional data on each
+product.
 
-Пролистай страницу до последней секции, в которой убедись что выбраны опции как
-на следующем изображении и нажми `Save`. Без этих настроек у сборки будет
-недостаточно прав для автоматизации процесса деплоя.
+![IceCreamProducts](./assets/03.jpg)
 
-![GitHub actions settings](./assets/actions-config-step-2.png)
+Developers: <a href="https://github.com/Oleh202208">Oleh Polupan</a>
 
-Продакшн версия проекта будет автоматически собираться и деплоиться на GitHub
-Pages, в ветку `gh-pages`, каждый раз когда обновляется ветка `main`. Например,
-после прямого пуша или принятого пул-реквеста. Для этого необходимо в файле
-`package.json` отредактировать поле `homepage` и скрипт `build`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+### How it's made section
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/",
-"scripts": {
-  "build": "parcel build src/*.html --public-url /your_repo_name/"
-},
-```
+This section presents the process of saled foods preparation. It includes
+general information, bright animationa, and modal windiw with video about the
+ice-cream preparation technology.
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+![IceCreamHowItsMade](./assets/04.jpg)  
+Developers: <a href="https://github.com/Tatiana1910">Tetiana Kramarenko</a>
 
-![GitHub Pages settings](./assets/repo-settings.png)
+### Statistics section
 
-### Статус деплоя
+Small section with sales statistics.
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+![IceCreamStatistics](./assets/05.jpg)  
+Developers: <a href="https://github.com/SergyChamata">Serhyi Chamata</a>
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+### Gallery section
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
+Small gallery that provides consumers with photos of the latest products.
+![IceCreamGallery](./assets/06.jpg)  
+Developers: <a href="https://github.com/IrynaVal">Iryna Petrenko</a>
 
-![Deployment status](./assets/status.png)
+### Feedback section
 
-### Живая страница
+Section contains slider with the reviews of different customers.
+![IceCreamReviews](./assets/07.jpg)  
+Developers: <a href="https://github.com/AlexGusl97">Oleksandr Husliakov </a>
 
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
+### Contacts section
 
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` или скрипта `build` в
-файле `package.json`.
+This section provides consumer with all necessary info about shops - their
+working hours, location, contact phone and email. It also contains two modals -
+the first one specifies shop's location on the map, and the second allows
+potential franchaisee to leave some personal contact data for futher
+communication.  
+![IceCreamContacts](./assets/08.jpg)  
+Developers: <a href="https://github.com/Olga-Melnyk">Olga Melnyk</a>
 
-## Как это работает
+### Footer section
 
-![How it works](./assets/how-it-works.png)
+Footer section includes some interactive hover effects and all the social media
+links of the product owner.  
+![IceCreamFooter](./assets/09.jpg)  
+Developers: <a href="https://github.com/Luidmyla007">Liudmyla Datsenko</a>
 
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+## Technology Stack
+
+The project was made using indicated tech stack:
+
+<div align="center">
+	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" alt="Git" title="Git" /></code>
+	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/192108374-8da61ba1-99ec-41d7-80b8-fb2f7c0a4948.png" alt="GitHub" title="GitHub" /></code>
+	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png" alt="Visual Studio Code" title="Visual Studio Code" /></code>
+	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML" /></code>
+	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS" /></code>
+    <code><img height="50" src="https://user-images.githubusercontent.com/25181517/192158956-48192682-23d5-4bfc-9dfb-6511ade346bc.png" alt="React" title="Sass" /></code>
+	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/189715289-df3ee512-6eca-463f-a0f4-c10d94a06b2f.png" alt="Figma" title="Figma" /></code>
+	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="JavaScript" title="JavaScript" /></code>
+	</div>
